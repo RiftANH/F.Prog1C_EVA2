@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Eclip"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-11 05:27:10 PM"/>
+        <attribute name="created" value="RWNsaXA7TVNJOzIwMjMtMTAtMTE7MDU6MDE6NDUgUE07MTk5NQ=="/>
+        <attribute name="edited" value="RWNsaXA7TVNJOzIwMjMtMTAtMTE7MDU6Mjc6MTAgUE07MTsyMTAz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="year" type="Integer" array="False" size=""/>
+            <declare name="residuo" type="Integer" array="False" size=""/>
+            <output expression="&quot;Introduce el a&#241;o a evaluar&quot;" newline="True"/>
+            <input variable="year"/>
+            <assign variable="residuo" expression="year%4"/>
+            <if expression="residuo=0">
+                <then>
+                    <assign variable="residuo" expression="year%100"/>
+                    <if expression="residuo=0">
+                        <then>
+                            <if expression="residuo=year%4">
+                                <then>
+                                    <output expression="&quot;Es bisisesto&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;no es bisisesto&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;Es bisiesto&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;el a&#241;o no es bisiesto&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
